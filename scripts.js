@@ -9,20 +9,18 @@ function scripts() {
   }, 5000);
 
   // время перемотки назад
-  let time = 1 * 60 * 1000;
+  let time = 5 * 60 * 1000;
   // храним положение переключателя субтитров
   let subtitle = false;
   // каждые 5 минут фильма
   setInterval(() => {
     // если русские субтитры включены
     if (subtitle) {
-      console.log(1);
       // отключаем субтитры
       $("label:contains('Нет')").click();
       //переключаем переменную
       subtitle = false;
     } else {
-      console.log(2);
       // если субтитры выключены
       // получаем видео
       let video = document.getElementsByTagName("video")[0];
