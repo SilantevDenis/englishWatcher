@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         englishWatcher
 // @namespace    https://github.com/SilantevDenis/englishWatcher
-// @version      1.0.0
+// @version      1.0.1
 // @description  helps to watch English movies and learn the language
 // @author       silantevdenis
 // @match        https://zloekino.su/*
