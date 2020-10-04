@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         englishWatcher
 // @namespace    https://github.com/SilantevDenis/englishWatcher
-// @version      1.0.1
+// @version      1.0.2
 // @updateURL    https://github.com/SilantevDenis/englishWatcher/raw/master/englishWatcher.user.js
 // @downloadURL  https://github.com/SilantevDenis/englishWatcher/raw/master/englishWatcher.user.js
 // @description  helps to watch English movies and learn the language
