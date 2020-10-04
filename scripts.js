@@ -1,4 +1,6 @@
 function scripts() {
   // вставляем стили для скрытия блоков
-  $("script:last").next().hide();
+  $("body *:first").before(
+    "<style>" + "noindex { display: none !important; }" + "</style>",
+  );
 }
