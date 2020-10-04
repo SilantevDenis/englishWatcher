@@ -12,6 +12,5 @@
 
 (function () {
   "use strict";
-
-  scripts();
+  $(document).ready(scripts);
 })();
