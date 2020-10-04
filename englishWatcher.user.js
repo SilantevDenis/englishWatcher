@@ -29,10 +29,13 @@
     setInterval(() => {
       // если русские субтитры включены
       if (subtitle) {
-        // отключаем субтитры
-        $("label:contains('Нет')").click();
-        //переключаем переменную
-        subtitle = false;
+        // смотрим еще 5 минут
+        setTimeout(() => {
+          // отключаем субтитры
+          $("label:contains('Нет')").click();
+          //переключаем переменную
+          subtitle = false;
+        }, time);
       } else {
         // если субтитры выключены
         // получаем видео
@@ -41,7 +44,7 @@
         video.currentTime -= time / 1000;
 
         // ставим русские субтитры
-        $("label:contains('Russian')").click();
+        $("label:contains('Forced')").first().click();
         //переключаем переменную
         subtitle = true;
       }
