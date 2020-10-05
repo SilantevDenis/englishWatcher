@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         englishWatcher
 // @namespace    https://github.com/SilantevDenis/englishWatcher
-// @version      1.0.2
+// @version      1.0.3
 // @updateURL    https://github.com/SilantevDenis/englishWatcher/raw/master/englishWatcher.user.js
 // @description  helps to watch English movies and learn the language
 // @author       silantevdenis
@@ -25,27 +25,24 @@
     // время перемотки назад
     let time = 5 * 60 * 1000;
     // храним положение переключателя субтитров
-    let subtitle = false;
+    let subtitle = true;
     // каждые 5 минут фильма
     setInterval(() => {
       // если русские субтитры включены
       if (subtitle) {
-        // смотрим еще 5 минут
-        setTimeout(() => {
-          // отключаем субтитры
-          $("label:contains('Нет')").click();
-          //переключаем переменную
-          subtitle = false;
-        }, time);
-      } else {
-        // если субтитры выключены
         // получаем видео
         let video = document.getElementsByTagName("video")[0];
         // перематываем на 5 минут назад
         video.currentTime -= time / 1000;
+        // отключаем субтитры
+        $("label:contains('Нет')").click();
+        //переключаем переменную
+        subtitle = false;
+      } else {
+        // если субтитры выключены
 
         // ставим русские субтитры
-        $("label:contains('Forced')").first().click();
+        $("label:contains('Russian')").first().click();
         //переключаем переменную
         subtitle = true;
       }
